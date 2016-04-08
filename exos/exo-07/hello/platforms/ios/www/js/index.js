@@ -36,6 +36,18 @@ var app = {
         app.receivedEvent('deviceready');
 
         document.getElementById('timestamp').innerHTML = new Date();
+        var element = document.getElementById('deviceConnections');
+        var networkState = navigator.connection.type;
+        var states = {};
+        states[Connection.UNKNOWN] = 'Unknown connection';
+        states[Connection.ETHERNET] = 'Ethernet connection';
+        states[Connection.WIFI] = 'vous etes bien connecte au wifi';
+        states[Connection.CELL_2G] = 'Cell 2G connection';
+        states[Connection.CELL_3G] = 'Cell 3G connection';
+        states[Connection.CELL_4G] = 'Cell 4G connection';
+        states[Connection.CELL] = 'Cell generic connection';
+        states[Connection.NONE] = 'No network connection';
+        alert('Connection type: ' + states[networkState] + " AU LIEU DE: " + networkState);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

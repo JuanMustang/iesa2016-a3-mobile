@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "ch.inagua.training.cordova"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "ch.inagua.training.cordova"
         }
     },
     "dependent_plugins": {}
