@@ -35,9 +35,9 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         // document.getElementById('timestamp').innerHTML = new Date();
-        app.findContacts();
+        app.SetupFindContactsButton();
     },
-    findContacts: function(){
+    SetupFindContactsButton: function(){
         $('#findButton').click(function(){
             var finder = $('#nameOfTheContactToFind').val();
 
